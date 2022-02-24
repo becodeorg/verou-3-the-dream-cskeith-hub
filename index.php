@@ -1,25 +1,44 @@
-<?php
+<?php // open php
+
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
+error_reporting(E_ALL); // code to report ERRORS
 
-function pre_r( $array )
+function pre_r( $array )  // Super Gobal Variable ARRAY
 {     
     echo '<pre>';
     print_r($array);
     echo '</pre>'; 
 }
-pre_r($_POST);
 
-if(isset($_POST['submit'])){
-    echo($_POST['amountInput']);
+pre_r($_POST); // Calling SuperGlobal  $_POST
+
+
+if(isset($_POST['submit'])){ // in Use of submit
+
+    fromToCheck(); // start this function
+
 }
-function balanceCheck(){
-    if ($_POST['valuta1'] === "EUR"){
-        echo "Euro";
+
+function fromToCheck(){ // function that checks From / To
+    if ($_POST['valuta1'] =="EUR" AND $_POST['valuta2'] == "IDR"){
+        
+        echo ($_POST["amountInput"]." ". $_POST["valuta1"] );
+
+        echo " Is worth ";
+
+        echo ($_POST["valuta2"]);
+
+    } else if($_POST['valuta1'] =="IDR" AND $_POST['valuta2'] == "EUR"){
+
+        echo ($_POST["amountInput"]." ".$_POST["valuta1"]);
+
+        echo " Is worth ";
+
+        echo ($_POST["valuta2"]);
     }
 }
-balanceCheck();
+
 
 
 require "view.php";
