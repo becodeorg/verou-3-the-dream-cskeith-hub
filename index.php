@@ -10,9 +10,16 @@ function pre_r( $array )
     echo '</pre>'; 
 }
 pre_r($_POST);
-pre_r($_GET);
-$intro = "This is the intro text";
+
 if(isset($_POST['submit'])){
     echo($_POST['amountInput']);
 }
+function balanceCheck(){
+    if ($_POST['valuta1'] === "EUR"){
+        echo "Euro";
+    }
+}
+balanceCheck();
+
+
 require "view.php";

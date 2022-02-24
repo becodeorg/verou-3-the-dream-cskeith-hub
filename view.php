@@ -8,9 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php
-    echo $intro;
-    ?>
     <main>
         <section>
             <div class="converter">
