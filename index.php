@@ -4,14 +4,14 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL); // code to report ERRORS
 
-function pre_r( $array )  // Super Gobal Variable ARRAY
-{     
-    echo '<pre>';
-    print_r($array);
-    echo '</pre>'; 
-}
+// function pre_r( $array )  // Super Gobal Variable ARRAY
+// {     
+//     echo '<pre>';
+//     print_r($array);
+//     echo '</pre>'; 
+// }
 
-pre_r($_POST); // Calling SuperGlobal  $_POST
+// pre_r($_POST); // Calling SuperGlobal  $_POST
 
 $idr = 16103.73; // rate of 25-2-2022 to 1EURO
 
@@ -40,6 +40,4 @@ function fromToCheck($idr,$eur){ // function that checks From / To
     }
 }
 
-
-$test = false;
 require "view.php";
