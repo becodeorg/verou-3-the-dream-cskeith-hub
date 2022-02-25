@@ -33,7 +33,9 @@
 
                     <input type="submit" name="submit" value="Convert NOW"><br>                
                 </form>
-                <div class="resultValuta">result</div>    
+                <?php if(isset($_POST['submit'])) : ?>
+                <div class="resultValuta"><?= $result ?></div>  
+                <?php endif;?> 
             </div>
         </section>
     </main>
