@@ -13,6 +13,13 @@ function pre_r( $array )  // Super Gobal Variable ARRAY
 
 pre_r($_POST); // Calling SuperGlobal  $_POST
 
+$idr = "16.103,73"; // rate of 25-2-2022 to 1EURO
+
+$eur = 1;
+
+echo $idr;
+
+echo $eur;
 
 if(isset($_POST['submit'])){ // in Use of submit
 
